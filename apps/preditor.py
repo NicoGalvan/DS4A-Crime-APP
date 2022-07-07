@@ -30,7 +30,9 @@ cols = [
     "cluster_predicted"
 ]
 
-cluster = pd.read_sql_table("cluster",engine,columns=cols)
+# cluster = pd.read_sql_table("cluster",engine,columns=cols)
+cluster = pd.read_sql_query("select nom_comuna,ano,categ_crimen,longitud,latitud,cluster_predicted from cluster where ano >= 2018 and ano <= 2019" ,engine)
+
 
 cell = pd.read_sql_table("grid",engine)  # Grid read
 df2 = cluster.dropna(subset=['latitud', 'longitud'])
@@ -93,7 +95,7 @@ layout = html.Div([
 
             html.Div([
                 html.Span('Year',className='leftnavBarInputFont'),
-                dcc.Dropdown([2014, 2015, 2016, 2017, 2018, 2019], value=2015, id='year-dropdown',style={'width':'180px'})
+                dcc.Dropdown([ 2018, 2019], value=2018, id='year-dropdown',style={'width':'180px'})
             ])
        
         ],style={'top':'300px','position':'absolute','paddingLeft':'28px'}),

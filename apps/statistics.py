@@ -38,7 +38,8 @@ cols = [
         "latitud",
     ]
 
-df = pd.read_sql_table("crimen_base_ex",engine,columns=cols)
+# df = pd.read_sql_table("crimen_base_ex",engine,columns=cols)
+df = pd.read_sql_query("select nom_comuna,conducta,fecha,fecha_mes,movil_agresor,movil_victima,categ_crimen,dia_semana,orden,latitud,longitud from crimen_base_ex where CAST(fecha AS date) between CAST('2018-01-01' AS date) and  CAST('2019-12-31' AS date)" ,engine)
 
 df['fechaconvert'] = pd.to_datetime(df['fecha'], format="%m/%d/%Y")
 

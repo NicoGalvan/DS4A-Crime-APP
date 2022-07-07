@@ -31,7 +31,8 @@ cols = [
         "latitud",
     ]
 
-df = pd.read_sql_table("crimen_base_ex_mod",engine,columns=cols)
+# df = pd.read_sql_table("crimen_base_ex_mod",engine,columns=cols)
+df = pd.read_sql_query("select ano,conducta,fecha_mes,orden,longitud,latitud from crimen_base_ex_mod where CAST(fecha AS date) between CAST('2018-01-01' AS date) and  CAST('2019-12-31' AS date)" ,engine)
 
 cell = pd.read_sql_table("grid",engine)  # Grid read
 df = df.dropna(subset=['latitud', 'longitud'])
@@ -184,7 +185,7 @@ layout = html.Div([
 
             html.Div([
                 html.Span('Year',className='leftnavBarInputFont'),
-                dcc.Dropdown([2014, 2015, 2016, 2017, 2018, 2019], value=2014, id='year-dropdown',style={'width':'180px'}),
+                dcc.Dropdown([ 2018, 2019], value=2018, id='year-dropdown',style={'width':'180px'}),
             ]),
 
             html.Div([

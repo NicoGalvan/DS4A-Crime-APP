@@ -12,7 +12,8 @@ layout = html.Div([
         html.Br(),'- Spatial Cluster Analysis of crime',
 
 ], className='parrafo'),
-    html.Iframe(src='https://www.youtube.com/embed/bDJXR5S8Bso',referrerPolicy='no-referrer',width='66%',height='683',title="YouTube video player",allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", style={'display':'block','margin':'auto'} ),
+    html.Iframe(src='https://www.youtube.com/embed/An6cWheNYtc',width='66%',height='683',title="YouTube video player",allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", style={'display':'block','margin':'auto'} ),
+    # html.Iframe(src='https://www.youtube.com/embed/bDJXR5S8Bso',referrerPolicy='no-referrer',width='66%',height='683',title="YouTube video player",allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", style={'display':'block','margin':'auto'} ),
     # html.Iframe(src='https://www.youtube.com/embed/b7qZPMqHnl4',referrerPolicy='no-referrer',width='66%',height='683',title="YouTube video player",allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", style={'display':'block','margin':'auto'} ),
     dcc.Link(html.Button('Go to dashboard',className='botonGoto'),href='/apps/statistics') ,
     html.H1('Bucaramanga Dataset', style={"textAlign": "center"},className='Cindex'),

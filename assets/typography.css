@@ -1,13 +1,15 @@
 body {
     margin: 0px;
     overflow-x: hidden;
+    font-size: calc(1em + 0.390625vw) ;
 }
+
 
 .likns{
     font-family: sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 32px;
+    /* font-size: 32px; */
     line-height: 39px;
     /* text-decoration-line: underline; */
     text-decoration: none;
@@ -25,7 +27,7 @@ body {
     font-family: sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 64px;
+    /* font-size: 64px; */
     margin: 1%;
     /* line-height: 77px; */
 
@@ -37,7 +39,7 @@ body {
     font-family: sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
+    /* font-size: 32px; */
     /* line-height: 39px; */
     text-align: justify;
     margin-inline: 5%;
@@ -92,7 +94,7 @@ justify-content: center;
     font-family: sans-serif;
 font-style: normal;
 font-weight: 400;
-font-size: 36px;
+/* font-size: 36px; */
 line-height: 44px;
 }
 
@@ -100,7 +102,7 @@ line-height: 44px;
     font-family: sans-serif;
 font-style: normal;
 font-weight: 400;
-font-size: 36px;
+/* font-size: 36px; */
 line-height: 44px;
 color: crimson;
 }
@@ -109,7 +111,7 @@ color: crimson;
     font-family: sans-serif;
 font-style: normal;
 font-weight: 400;
-font-size: 20px;
+/* font-size: 20px; */
 line-height: 24px;
 
 color: #FFFFFF;
@@ -127,7 +129,7 @@ color: #FFFFFF;
     font-family: sans-serif;
 font-style: normal;
 font-weight: 400;
-font-size: 38px;
+/* font-size: 38px; */
 margin-top: 170px;
 /* line-height: 58px; */
 }
@@ -166,7 +168,7 @@ top: 3007px; */
     font-family: sans-serif;
 font-style: normal;
 font-weight: 400;
-font-size: 32px;
+/* font-size: 32px; */
 line-height: 39px;
 white-space: nowrap;
 }
@@ -189,6 +191,10 @@ white-space: nowrap;
 
 
 }
+.BloqFooter{
+    display: flex;
+    justify-content: space-evenly;
+}
 @media (max-width: 1900px) {
     .graphtamañomapa{
         /* width: 1450px; */
@@ -197,9 +203,47 @@ white-space: nowrap;
     
     
     }
+    .MembersPhothos{
+
+        /* position: absolute; */
+    width: 225px;
+    height: 225px;
+    /* left: 75px;
+    top: 3007px; */
+    }
+    
 }
+@media (max-width: 900px){
+    .rowfld a:not(:first-child)  {display: none;}
+    .rowfld img:not(:first-child)  {display: none;}
+    .imgsFooter{
+        width: 80%;
+        height: auto;
+    }
+    .BloqFooter{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .BloqFooter img:not(:first-child) {display: none;}
+    .MembersPhothos{
 
+        /* position: absolute; */
+    width: 135px;
+    height: 135px;
+    /* left: 75px;
+    top: 3007px; */
+    }
 
+    .botonGoto{
+        width: 170px;
+        height: 50px;
+        font-size: 16px;
+    }
+
+}
+@media (min-width: 1300px){
+    .vidMain{min-height: 500px;}
+}
 @media (max-width: 1366px) {
     .Bloquedefotos {
         flex-wrap: wrap;

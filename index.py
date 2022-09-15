@@ -4,15 +4,20 @@ from dash import dcc
 from dash import html,Dash
 
 from dash.dependencies import Input, Output
-
+import dash
 # Connect to main app.py file
 from app import app, server
-
+import dash_bootstrap_components as dbc
 # Connect to your app pages
 from apps import statistics, map, preditor, inicio  
 # app = dash.Dash(__name__)
 # app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
+external_stylesheets = [
+    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
+     
+]
 
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 app.layout = html.Div([
     
@@ -25,6 +30,7 @@ app.layout = html.Div([
         dcc.Link('Spatial analysis', href='/apps/map',className="likns"),
         html.Img(src=app.get_asset_url('imagenes/imageCpredictor.png')),
         dcc.Link('Crime clustering', href='/apps/preditor',className="likns"),
+        # html.I(className="fas fa-shield"),
     ], className="rowfld",style={'backgroundColor': '#FBF336', 'height': '120px','width':'100%','position':'fixed','top':'0','zIndex':'100'}),
     html.Div(id='page-content', children=[],style={'marginTop':'170px'})
 ])

@@ -195,6 +195,9 @@ white-space: nowrap;
     display: flex;
     justify-content: space-evenly;
 }
+.DHeader{
+    display: none;
+}
 @media (max-width: 1900px) {
     .graphtamañomapa{
         /* width: 1450px; */
@@ -203,6 +206,7 @@ white-space: nowrap;
     
     
     }
+    
     .MembersPhothos{
 
         /* position: absolute; */
@@ -214,11 +218,18 @@ white-space: nowrap;
     
 }
 @media (max-width: 900px){
-    .rowfld a:not(:first-child)  {display: none;}
-    .rowfld img:not(:first-child)  {display: none;}
+    .rowfld a  {display: none;}
+    #dropdown-button1  {display: block !important;}
+    #dropdown-button2  {display: block !important;}
+    #dropdown-button3  {display: block !important;}
+    .rowfld img  {display: none;}
     .imgsFooter{
         width: 80%;
         height: auto;
+    }
+    .DHeader{
+        display: block;
+        margin-left: 10%;
     }
     .BloqFooter{
         display: flex;

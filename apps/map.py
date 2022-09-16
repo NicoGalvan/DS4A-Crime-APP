@@ -185,12 +185,14 @@ layout = html.Div([
 
             html.Div([
                 html.Span('Year',className='leftnavBarInputFont'),
-                dcc.Dropdown([ 2018, 2019], value=2018, id='year-dropdown',style={'width':'180px'}),
+                dcc.Dropdown([ 2018, 2019], value=2018, id='year-dropdown',style={'width':'180px','fontSize':'14px'}, clearable=False,
+                persistence=True, persistence_type='local'),
             ]),
 
             html.Div([
                 html.Span('Type of crime',className='leftnavBarInputFont'),
-                dcc.Dropdown(['HURTO A PERSONAS', 'LESIONES PERSONALES', 'VIOLENCIA INTRAFAMILIAR', 'HOMICIDIO'], value='HURTO A PERSONAS', id='crime-dropdown',style={'width':'180px'}),
+                dcc.Dropdown(['HURTO A PERSONAS', 'LESIONES PERSONALES', 'VIOLENCIA INTRAFAMILIAR', 'HOMICIDIO'], value='HURTO A PERSONAS', id='crime-dropdown',style={'width':'180px','fontSize':'14px'}, clearable=False,
+                persistence=True, persistence_type='local',optionHeight=100),
 
             ],style={'paddingTop':'10px'}),
 

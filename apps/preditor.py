@@ -95,7 +95,8 @@ layout = html.Div([
 
             html.Div([
                 html.Span('Year',className='leftnavBarInputFont'),
-                dcc.Dropdown([ 2018, 2019], value=2018, id='year-dropdown',style={'width':'180px'})
+                dcc.Dropdown([ 2018, 2019], value=2018, id='year-dropdown',style={'width':'180px','fontSize':'14px'}, clearable=False,
+                persistence=True, persistence_type='local') 
             ])
        
         ],style={'top':'300px','position':'absolute','paddingLeft':'28px'}),

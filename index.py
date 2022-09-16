@@ -25,6 +25,18 @@ app.layout = html.Div([
         dcc.Link('Spatial analysis', href='/apps/map',className="likns"),
         html.Img(src=app.get_asset_url('imagenes/imageCpredictor.png')),
         dcc.Link('Crime clustering', href='/apps/preditor',className="likns"),
+        html.Div([
+            dbc.DropdownMenu(
+            
+            [
+            dbc.DropdownMenuItem("Crime statistics", href="/apps/statistics", id="dropdown-button1"),
+            dbc.DropdownMenuItem("Spatial analysis", href="/apps/map", id="dropdown-button2"),
+            dbc.DropdownMenuItem("Crime clustering", href="/apps/preditor", id="dropdown-button3"),
+            ],
+            label="Menu",
+            menu_variant="dark"),
+        ],className='DHeader'),
+        
         # html.I(className="fas fa-shield"),
     ], className="rowfld",style={'backgroundColor': '#FBF336', 'height': '120px','width':'100%','position':'fixed','top':'0','zIndex':'100'}),
     html.Div(id='page-content', children=[],style={'marginTop':'170px'})
